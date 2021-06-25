@@ -47,31 +47,7 @@ pipeline {
                     waitForQualityGate abortPipeline: true
                 }
             }
-        }        
-/*
-        stage('deploy development'){
-            steps {
-                deploy(developmentServer, serverPort)
-            }
         }
-
-        stage('deploy staging'){
-            steps {
-                deploy(stagingServer, serverPort)
-            }
-        }
-
-        stage('deploy production'){
-            steps {
-                deploy(productionServer, serverPort)
-            }
-        }*/
     }
-/*      post {
-         failure {
-             mail to: pipelineParams.email, subject: 'Pipeline failed', body: "${env.BUILD_URL}"
-            }
-		}
-*/		
 }
 }
