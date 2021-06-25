@@ -8,8 +8,8 @@ pipeline {
     environment {
         branch = "${pipelineParams.branch}"
         scmUrl = "${pipelineParams.scmUrl}"
-        serverPort = "${pipelineParams.serverPort"${
-        developmentServer = "${pipelineParams.developmentServer"${
+        serverPort = "${pipelineParams.serverPort}"
+        developmentServer = "${pipelineParams.developmentServer}"
         //stagingServer = 'staging-myproject.mycompany.com'
         //productionServer = 'production-myproject.mycompany.com'
     }
