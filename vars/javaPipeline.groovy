@@ -14,18 +14,18 @@ pipeline {
         //productionServer = 'production-myproject.mycompany.com'
     }
     stages {
-        stage('checkout git') {
+        stage('Checkout') {
             steps {
                 git branch: branch, credentialsId: 'GitCredentials', url: scmUrl
             }
         }
 
-        stage('build') {
+        stage('Build') {
             steps {
                 sh 'mvn clean package -DskipTests=true'
             }
         }
-        stage ('test') {
+        stage ('Test') {
             steps {
                 parallel (
                     "unit tests": { sh 'mvn test' },
