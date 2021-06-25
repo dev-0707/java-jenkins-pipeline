@@ -6,7 +6,7 @@ pipeline {
            jdk 'openjdk-11'
        }    
     environment {
-        branch = pipelineParams.branch
+        branch = ${pipelineParams.branch}
         scmUrl = pipelineParams.scmUrl
         serverPort = pipelineParams.serverPort
         developmentServer = pipelineParams.developmentServer
